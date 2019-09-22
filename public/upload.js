@@ -1,3 +1,6 @@
+/* Based on the this article to help with the uploading process
+https://dzone.com/articles/upload-files-or-images-to-server-using-nodejs
+*/
 
 $(document).ready(function () { 
     var options = { 
@@ -15,8 +18,10 @@ $(document).ready(function () {
 
 // pre-submit callback 
 function showRequest(formData, jqForm, options) { 
+    //Error checking: making sure that there is data to upload, not just hitting the submit button
     if (formData[0].value == ""){
         alert('No photo selected');
+        //if no data, cancel the request
         return false;
     }
     alert('Uploading is starting.'); 
@@ -30,7 +35,6 @@ function showResponse(responseText, statusText, xhr, $form) {
     alert('status: ' + statusText + '\n\nresponseText: \n' + responseText ); 
    
 } 
-
 function clearForm() {
     let form = document.getElementById('frmUploader');
     form.reset();
