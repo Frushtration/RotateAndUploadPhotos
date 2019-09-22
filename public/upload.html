@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width">
+  <title>Slideshow</title>
+  <!-- <link rel="stylesheet" type="text/css" href="./Palindrome_files/reset.css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jquery-form/form@4.2.2/dist/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+  <header> Please select the photo you'd like to upload!</header>
+
+  <main>
+      <div>
+      <form id="frmUploader" enctype="multipart/form-data" action="upload/" method="post">
+        <input type="file" name="imgUploader" multiple />
+        <input type="submit" name="submit" id="btnSubmit" value="Upload" /> </form>
+    </form>
+</div>
+ 
+  </main>
+      <script src="upload.js"></script>
+</body>
+
+</html>
